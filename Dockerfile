@@ -1,4 +1,4 @@
-FROM dpage/pgadmin4:8.6
+FROM dpage/pgadmin4:9.10
 USER root
 RUN setcap -r /usr/bin/python3.11
 ENV PGADMIN_LISTN_ADDRESS=0.0.0.0
