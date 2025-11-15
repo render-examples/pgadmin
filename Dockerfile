@@ -1,5 +1,7 @@
-FROM dpage/pgadmin4:9.10
+FROM dpage/pgadmin4:8.6
 USER root
+RUN apt-get update && apt-get install -y libcap2-bin
+RUN setcap -r /usr/bin/python3.11
 ENV PGADMIN_LISTN_ADDRESS=0.0.0.0
 ENV PGADMIN_DISABLE_POSTFIX=true
 ENV PGADMIN_CONFIG_UPGRADE_CHECK_ENABLED=False
