@@ -1,4 +1,4 @@
-FROM dpage/pgadmin4:9.10
+FROM dpage/pgadmin4:8.5
 USER root
 RUN setcap -r "$(realpath "$(which python3)")"
 ENV PGADMIN_LISTN_ADDRESS=0.0.0.0
